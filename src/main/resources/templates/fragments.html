@@ -11,17 +11,3 @@
 	</div>
 </div>
 
-<div th:fragment="layout(title, items)" class="row">
-	<div class="col text-center my-5">
-		<h1 th:text="${title}"></h1>
-		<ul class="d-flex flex-column align-items-center list-unstyled my-4">
-			<li class="border mb-2 col-4" th:each="item : ${items}">
-				<a th:href="@{/items/} + ${item.id}" th:text="${item.title}" class="text-decoration-none"></a>
-			</li>
-		</ul>
-
-		<div class="mt-5">
-			<a th:href="@{/}" class="btn btn-primary btn-block">Homepage</a>
-		</div>
-	</div>
-</div>
