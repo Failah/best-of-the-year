@@ -9,18 +9,7 @@
 <body>
 	<div class="container mt-5">
 		<div th:replace="~{fragments :: navbar}"></div>
-		<div class="row">
-			<div class="col text-center my-5">
-				<h1>Movies list:</h1>
-				<ul class="d-flex flex-column align-items-center list-unstyled my-4">
-					<li class="border mb-2 col-4" th:each="movie : ${movies}" th:text="${movie}"></li>
-				</ul>
-
-				<div class="mt-5">
-					<a th:href="@{/}" class="btn btn-primary btn-block">Homepage</a>
-				</div>
-			</div>
-		</div>
+		<div th:replace="~{fragments :: layout('Movies list:', ${movies})}"></div>
 	</div>
 </body>
 </html>
