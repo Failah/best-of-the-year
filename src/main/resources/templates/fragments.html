@@ -1,0 +1,25 @@
+<div th:fragment="navbar"
+	class="row border p-2 align-items-center justify-content-center">
+	<div class="col-3">
+		<h2>Best of:</h2>
+	</div>
+	<div class="col-3">
+		<a th:href="@{/movies}" class="btn btn-primary btn-block">Movies</a>
+	</div>
+	<div class="col-3">
+		<a th:href="@{/songs}" class="btn btn-primary btn-block">Songs</a>
+	</div>
+</div>
+
+<div th:fragment="layout(title, items, item)" class="row">
+	<div class="col text-center my-5">
+		<h1>Songs list:</h1>
+		<ul class="list-unstyled my-4">
+			<li th:each="song : ${songs}" th:text="${song}"></li>
+		</ul>
+
+		<div class="mt-5">
+			<a th:href="@{/}" class="btn btn-primary btn-block">Homepage</a>
+		</div>
+	</div>
+</div>

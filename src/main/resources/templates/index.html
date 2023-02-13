@@ -3,8 +3,38 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Best of the Year</title>
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}" />
 </head>
 <body>
-<h1>Best of the year by Valerio!</h1>
+	<div class="container mt-5">
+		<div th:replace="~{fragments :: navbar}"></div>
+
+		<h1 class="mt-5 mb-4 text-center">Best of the year by Valerio!</h1>
+
+		<div class="row justify-content-center">
+			<img class="img-fluid w-50" alt="image" th:src="@{/img/test.png}" />
+		</div>
+		<div class="mt-4">Nei quotidiani, il settore costituiva uno dei settori della
+			cronaca cittadina (ripartita in bianca, rosa e nera) e pertanto se ne
+			occupavano i redattori ordinari. All'inizio del Novecento, quando
+			nacque, il genere era molto ristretto e comprendeva solo le vicende
+			private delle famiglie aristocratiche e dell'alta società in genere.
+			Nel dopoguerra la cronaca rosa si è allargata ai divi del cinema. La
+			crisi petrolifera del 1973 ha segnato, con il definitivo tramonto del
+			boom economico, la fine di alcuni modelli imitativi che, per tutto il
+			Novecento, avevano occupato le pagine della Cronaca rosa e fatto la
+			fortuna di molti periodici a larga diffusione (ad esempio, Oggi,
+			Gente, Epoca). Oggi la cronaca rosa riguarda, oltre agli attori,
+			anche i cantanti, i personaggi della televisione ed i campioni dello
+			sport e mira ad avere il riscontro di un enorme interesse da parte
+			del pubblico, anche se questo non necessariamente comporta un aumento
+			di popolarità dei personaggi coinvolti e un conseguente incremento
+			della loro visibilità mediatica. Molto di frequente, infatti, si ha
+			l'effetto contrario: i personaggi pubblici coinvolti in scoop, non
+			sempre credibili ma spesso ingigantiti o scritti a tavolino,
+			finiscono per avere una caduta di popolarità e di immagine nei
+			confronti del pubblico[1], dei media e della critica.</div>
+	</div>
 </body>
 </html>

@@ -3,12 +3,26 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Songs List</title>
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}" />
 </head>
 <body>
+	<div class="container mt-5">
+		<div th:replace="~{fragments :: navbar}"></div>
 
-<h1>
-Songs list:
-</h1>
-<p th:text="${songs}"></p>
+		<div class="row">
+			<div class="col text-center my-5">
+				<h1>Songs list:</h1>
+				<ul class="d-flex flex-column align-items-center list-unstyled my-4">
+					<li class="border mb-2 col-4" th:each="song : ${songs}" th:text="${song}"></li>
+				</ul>
+
+				<div class="mt-5">
+					<a th:href="@{/}" class="btn btn-primary btn-block">Homepage</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>
